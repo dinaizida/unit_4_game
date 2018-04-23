@@ -1,0 +1,11 @@
+body {
+    line-height: 150%;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ddd;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif, 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
