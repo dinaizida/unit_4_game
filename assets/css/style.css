@@ -9,35 +9,50 @@ body {
     font-family: 'Noto Sans', sans-serif, 'Roboto', sans-serif;
     font-size: 1.2em;
     min-height: 100vh;
-    
     font-size: 1.2em;
     text-align: center;
 }
-h1{
+
+h1 {
     color: #ff6a84;
-    
     font-weight: bold;
     text-shadow: 5px 5px 4px #E7A5BA;
-
 }
-.rowStatistic{
+
+.rowStatistic {
     color: #ff6a84;
     font-size: 1.3em;
     padding: 20px;
     margin: 20px auto;
+    height: 200px;
 }
-#computerNumber{
+
+#computerNumber {
     font-size: 1.4em;
     color: #89d7e0
 }
-#totalScore, #winORlost, #win, #lost, {
+
+#totalScore,
+#winORlost,
+#win,
+#lost {
     color: #ff6a84;
 }
+
+#winORlost,
+#win,
+#lost {
+    margin-top: 20px;
+    color: white;
+    font-size: 1.3em;
+}
+
 .gameTitle {
-    padding:10px;
+    padding: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .gameRules {
     background-color: gray;
     font-size: 0.8em;
@@ -48,64 +63,53 @@ h1{
     border-radius: 5px;
     border: solid 1px #E7A5BA;
     padding: 5px;
-    margin: 20px 50px;;
+    margin: 20px 50px;
+    ;
 }
-    /*footer*/
-    
-    #footernav {
-        background-color: #666666;
-        color: lightgray;
-        font-size: 0.7em;
-        text-align: center;
-        padding: 5px;
-        margin: 0 auto;
-    }
-    
-    #footernav a:link,
-    a:visited {
-        color: lightgray;
-    }
-    
-    .copy {
-        padding: 5px;
-    }
-    
-    .social {
-        padding: 5px;
-        margin: 0 auto;
-    }
-    
-     
-    
-.crystalsPanel{
+
+#startButton {
+    margin: 20px;
+}
+
+#totalScore {
+    background-color: #89d7e0;
+    opacity: 0.8;
+    padding: 5px;
+    border: solid 1px #ff6a84;
+    border-radius: 3px;
+    max-width: 50%;
+    margin: auto;
+}
+
+.crystalsPanel {
     display: flex;
     justify-content: space-between;
+    margin: 20px auto;
 }
 
-.crystal{
+.crystal {
     width: 150px;
     height: 150px;
-    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    margin: 10px auto;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    /* Safari */
     transition: width 2s, height 2s, transform 2s;
-    
-
-    
 }
-.crystal:hover{
-	
-	
+
+.crystal:hover {
     cursor: pointer;
-    width: 170px;
-    height: 170px;
-    -webkit-transform: rotate(180deg); /* Safari */
+    width: 150px;
+    height: 150px;
+    -webkit-transform: rotate(180deg);
+    /* Safari */
     transform: rotate(180deg);
-	
-
-
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    /* Safari */
+    transition: width 2s, height 2s, transform 2s;
 }
+
 
 /*footer*/
-
 
 #footernav {
     background-color: #666666;
@@ -130,64 +134,98 @@ a:visited {
     margin: 0 auto;
 }
 
-@media (max-width: 375px) {
-    h1{
-        font-size: 1.2em;
+@media (max-width: 840px) {
+    .crystal {
+        width: 70px;
+        height: 70px;
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* Safari */
+        transition: width 2s, height 2s, transform 2s;
     }
-    .crystal{
-        width: 50px;
-        height: 50px;
+    .crystal:hover {
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        -webkit-transform: rotate(180deg);
+        /* Safari */
+        transform: rotate(180deg);
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* Safari */
+        transition: width 2s, height 2s, transform 2s;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.2em;
     }
     #totalScore {
         background-color: #89d7e0;
         padding: 2px;
-        border:solid 1px #ff6a84;
+        border: solid 1px #ff6a84;
         border-radius: 3px;
+        min-width: 80%;
+        margin: auto;
+    }
+    #winORlost,
+    #win,
+    #lost {
+        margin-top: 10px;
+        color: aliceblue;
+        font-size: 1.5em
     }
     .headerTitle {
-        font-size: 0.5em;
+        font-size: 0.7em;
+        margin-top: 10px;
+    }
+    .rowStatistic {
+        color: #ff6a84;
+        font-size: 1em;
+        padding: 5px;
+        margin: 5px auto;
+        height: 200px;
+    }
+    .crystalsPanel {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px auto;
     }
     .gameRules {
         background-color: gray;
-        font-size: 0.8em;
+        font-size: 0.6em;
+        line-height: 1.5em;
         opacity: 0.8;
         color: whitesmoke;
-        padding: 15px 1px;
+        padding-top: 15px;
+        padding-bottom: 0;
         margin: 1% 5% 1% 6%;
         border-radius: 5px;
         border: solid 1px #E7A5BA;
-        padding: 5px;
-        margin: 10px 5px;;
+        margin: 15px auto;
+        ;
     }
-    #clear {
-        margin: 30px;
+    #startButton {
+        margin: 5px;
     }
-    
     #footernav {
         display: none;
     }
-    .crystal{
+    .crystal {
         width: 70px;
         height: 70px;
-        -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* Safari */
         transition: width 2s, height 2s, transform 2s;
-        
-        
     }
-    .btn-raised{
-        border: solid 1px white;
-        background-color: #89d7e0; 
-    }
-    .crystal:hover{
-        
-        
+    .crystal:hover {
         cursor: pointer;
-        width: 90px;
-        height: 90px;
-        -webkit-transform: rotate(180deg); /* Safari */
+        width: 70px;
+        height: 70px;
+        -webkit-transform: rotate(180deg);
+        /* Safari */
         transform: rotate(180deg);
-
-
-
-
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* Safari */
+        transition: width 2s, height 2s, transform 2s;
+    }
 }

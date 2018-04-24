@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="shortcut icon" href="assets/images/favicon.png" />
@@ -25,15 +25,11 @@
                 <div class="gameTitle">
                     <h1>CRYSTALS COLLECTOR</h1></div>
                 <div class="gameRules">
-                    
-                        <p>
-                            You will be given and random number at the start of the game.
-                            By clicking on any crystals you will add a specific amount of points to your total score.
-                            You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number. 
-                            The value of each crystal is hidden from you until your click on it. Each time when the game starts, the game will change the valu
-                            Each time when the game starts, the game will change the values of each crystal. 
-                        </p>
-                    
+
+                    <p>
+                        You will be given and random number at the start of the game. By clicking on any crystals you will add a specific amount of points to your total score. You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number. The value of each crystal is hidden from you until your click on it. Each time when the game starts, the game will change the valu Each time when the game starts, the game will change the values of each crystal.
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -45,24 +41,24 @@
             </div>
         </div>
         <div class="rowCrystal  row">
-                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
-                <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8">
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8">
                 <div class="crystalsPanel"></div>
-                </div>
-                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
         </div>
-        </div>
-    
+        <div id="startButton"></div>
+    </div>
+
     <div class="rowStatistic row">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
             <p id="totalScore"></p>
             <p id='winORlost'></p>
             <p id="win"></p>
             <p id="lost"></p>
-            <div id="startButton"></div>
+
         </div>
     </div>
-    
 
     <div id="footernav" class="navbar navbar-default fixed-bottom">
         <div class="container">
@@ -94,8 +90,8 @@
     <script src="assets/javascript/game.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 </body>
 
 </html>

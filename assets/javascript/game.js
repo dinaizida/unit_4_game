@@ -5,6 +5,13 @@ $("document").ready(function() {
     var losses = 0;
     var total = 0;
 
+    //audio function to add audio
+    function playAudio(gameAudio) {
+        var audio = new Audio(gameAudio);
+        audio.play();
+        audio.volume = .5;
+    }
+
     //to start game 
     var startGame = function() {
         $(".crystalsPanel").empty();
@@ -28,7 +35,7 @@ $("document").ready(function() {
             crystalRandom = Math.floor(Math.random() * 12) + 1;
 
             var crystal = $("<div>");
-            // assign images and random number to crystal attributes
+            // assign images and random number to crystal using attributes
             crystal.attr({
                 "class": 'crystal',
                 "data-crystal": crystalRandom
@@ -45,12 +52,13 @@ $("document").ready(function() {
     }
 
     startGame();
-
+    //click on crystal
     $(document).on("click", ".crystal", function() {
         //convert string "number" into number "number" to calculate total score
         var number = parseInt($(this).attr('data-crystal'));
         total += number;
         $("#totalScore").html("Your Total Score is:  " + total);
+        playAudio('assets/sounds/letterCorrect.mp3');
 
         //check all conditions for the game
 
@@ -58,9 +66,11 @@ $("document").ready(function() {
             losses++;
             $("#lost").html("Losses :" + losses);
             //create a start button 
-            $("#winORlost").html("You Lost!" )
-            $("#startButton").html('<button id="clear" type="button" class="btn btn-raised btn-secondary">Start Game</button>')
+            $("#winORlost").html("You Lost!");
+            playAudio('assets/sounds/gameLost.mp3');
+            $("#startButton").html('<button id="clear" type="button" class="btn btn-raised btn-lg">Start Game</button>')
             $("#startButton").attr("background-color", "#89d7e0")
+
             total = 0;
 
             var main = $("body");
@@ -73,8 +83,9 @@ $("document").ready(function() {
         } else if (total === computerRandom) {
             wins++;
             $("#win").html("Wins :" + wins);
-            $("#winORlost").html("You Won!" );
-            $("#startButton").html('<button id="clear" type="button" class="btn btn-raised btn-secondary">Start Game</button>')
+            $("#winORlost").html("You Won!");
+            playAudio('assets/sounds/gameWon.mp3');
+            $("#startButton").html('<button id="clear" type="button" class="btn btn-raised btn-lg">Start Game</button>')
             total = 0;
             var main = $("body");
             var btns = main.find("#clear");
