@@ -60,7 +60,7 @@ $("document").ready(function() {
             //create a start button 
             $("#winORlost").html("You Lost!" )
             $("#startButton").html('<button id="clear" type="button" class="btn btn-raised btn-secondary">Start Game</button>')
-            alert(total)
+            $("#startButton").attr("background-color", "#89d7e0")
             total = 0;
 
             var main = $("body");
@@ -72,7 +72,7 @@ $("document").ready(function() {
 
         } else if (total === computerRandom) {
             wins++;
-            $("#win").html("Wins :" + win);
+            $("#win").html("Wins :" + wins);
             $("#winORlost").html("You Won!" );
             $("#startButton").html('<button id="clear" type="button" class="btn btn-raised btn-secondary">Start Game</button>')
             total = 0;
