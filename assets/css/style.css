@@ -8,15 +8,17 @@ body {
     text-align: center;
     font-family: 'Noto Sans', sans-serif, 'Roboto', sans-serif;
     font-size: 1.2em;
+    height: 100vh;
 }
-.crystals{
+.crystalsPanel{
     display: flex;
     justify-content: space-around;
 }
+
 .crystal{
-    width: 100px;
-    height: 100px;
-    background-color: gray;
+    width: 150px;
+    height: 150px;
+    
     border: solid 2px red;
     position: relative;
 }
