@@ -27,13 +27,11 @@ var startGame = function(){
         crystalRandom = Math.floor(Math.random()*12) + 1;
 
         var crystal = $("<div>");
-
+         // assign images and random number to crystal attributes
         crystal.attr({"class": 'crystal', "data-crystal": crystalRandom});
         crystal.css({"background-image":"url('"+ crystalImages[i] +"')", "background-size" : "cover"});
-
         $(".crystalsPanel").append(crystal);
-
-
+    
     }
 
     $("#totalScore").html("Your Total Score is:  " + total);
@@ -41,14 +39,41 @@ var startGame = function(){
 
 startGame();
 
-$("document").on("click", ".crystal", function(){
+$(document).on("click", ".crystal", function(){
+    //convert string "number" into number "number" to calculate total score
+    var number = parseInt($(this).attr('data-crystal'));
+    total += number;
+    $("#totalScore").html("Your Total Score is:  " + total);
+
+    if ( total > computerRandom){
+        losses ++;
+        $("#lost").html("You Lost :" + losses);
+        $("#winORlost").html("You Lost!" + '<button id="clear" type="button" class="btn btn-raised btn-secondary">Start Game</button>')
+        total = 0;
+
+        var main = $("body");
+        var btns = main.find("#clear");
+        main.on("click", "#clear", function() {
+        $(".wrapper").empty();     
+        startGame();
+        });
     
-    var number = $(this).data(crystalRandom);
-
-    console.log(number);
-
- })
-
+    }
+    else if (total === computerRandom){
+        wins ++;
+        $("#win").html("You Won :" + win);
+        $("#winORlost").html("You Won!" + '<button id="clear" type="button" class="btn btn-raised btn-secondary">Start Game</button>')
+        total = 0;
+        var main = $("body");
+        var btns = main.find("#clear");
+        main.on("click", "#clear", function() {
+        $(".wrapper").empty();     
+        startGame();
+        });
+    }
+    
+ });
+  
 
 
 });
