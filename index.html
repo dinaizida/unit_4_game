@@ -18,6 +18,8 @@
     </head>
 <body>
     <div class = "game">
+            <div class="rowTitle">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <div class = "gameTitle"><h1>CRYSTALS COLLECTOR</h1></div>
     <div class = "gameRules">
         <p><ul>
@@ -29,24 +31,61 @@
            </ul>
         </p>
     </div>
+</div>
+</div>
      
 
-   
+<div class="rowTitle">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
     <p id="computerNumber"></p>
+
+    </div>
+    </div>
+    <div class="rowTitle">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
 	<div class="crystalsPanel">
 
-	</div>
-
+    </div>
+    </div>
+    </div>
+    <div class="rowTitle">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
 	<p id="totalScore"></p>
     <p id = 'winORlost'></p>
 	<p id="win"></p>
     <p id="lost"></p>
     <div id="startButton"></div>
     </div>
+</div>
+</div>
 
+    <div id="footernav" class="navbar navbar-default fixed-bottom">
+        <div class="container">
+            <div class="copy">
+                Copyright &copy; <span id="copyright_year"></span> Designed by Dina Rudenko at <a target="_blank" href="http://businessonwww.com/">BusinessOnWWW.com</a> | Austin Texas Web Design | All Rights Reserved. | Audio from http://www.freesfx.co.uk |
+            </div>
+            <script>
+                function init() {
+                    getCopyrightYear();
+                }
 
-    <div class = "footer"></div>
+                function getCopyrightYear() {
+                    var d = new Date();
+                    var thisYear = d.getFullYear();
+                    document.getElementById("copyright_year").innerHTML = thisYear;
+                }
+                window.onload = init;
+            </script>
+
+            <div class="social">
+                <a href="https://github.com/dinaizida" target="_blank"><i style="font-size:16px" class="fa">&#xf092;</i></a>
+                <a href="https://www.linkedin.com/in/DinaRudenko/" target="_blank"><i style="font-size:16px" class="fa">&#xf08c;</i></a>
+                <a href="https://stackoverflow.com/users/6179580/dina" target="_blank"><i style="font-size:16px" class="fa">&#xf16c;</i></a>
+                <a href="https://www.facebook.com/businessonwww/" target="_blank"><i style="font-size:16px" class="fa">&#xf082;</i></a>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/javascript/game.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
