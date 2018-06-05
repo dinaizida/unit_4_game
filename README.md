@@ -1,5 +1,7 @@
 # unit-4-game
 
+https://dinaizida.github.io/unit_4_game/
+
 Project Description:
 
 An interactive web browsers game that dynamically updates the HTML using the jQuery library.
@@ -32,3 +34,4 @@ Project Details:
 Technologies Used: HTML, CSS, jQuery, Material Design front-end component library for Bootstrap.
 
 
+![Screen Shot](https://github.com/dinaizida/unit_4_game/blob/master/assets/images/git.png)
