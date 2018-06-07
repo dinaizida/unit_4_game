@@ -31,7 +31,7 @@ o The app should show the number of games the player wins and losses. To that en
 
 Project Details:
 
-Technologies Used: HTML, CSS, jQuery, Material Design front-end component library for Bootstrap.
+Technologies Used: jQuery, HTML, CSS, Material Design front-end component library for Bootstrap.
 
 
 ![Screen Shot](https://github.com/dinaizida/unit_4_game/blob/master/assets/images/git.png)
